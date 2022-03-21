@@ -1,0 +1,19 @@
+ {
+  "squadName" : "Super Hero Squad",
+  "homeTown" : "Metro City",
+  "formed" : 2016,
+  "secretBase" : "Super tower",
+  "active" : true,
+  "members" : [
+    {
+      "name" : "Bilal Ellolahi",
+      "age" : 24,
+      "secretIdentity" : "Bill",
+      "powers" : [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    }
+  ]
+}
