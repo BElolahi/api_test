@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  e2e-chrome_9:
+    image: '9982054831/dock-cypress:v1'
+    command: 'cy:run10'
+    volumes:
+      - .:/var/www:consistent
+  e2e-chrome_10:
+    image: '9982054831/dock-cypress:v2'
+    command: 'cy:run11'
+    volumes:
+      - .:/var/www:consistent
+  e2e-chrome_11:
+    image: '9982054831/dock-cypress:v3'
+    command: 'cy:run12'
+    volumes:
+      - .:/var/www:consistent
+      
+ 

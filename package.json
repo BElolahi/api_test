@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cypress open"
+    "start": "cypress open",
+    "cy:run12": "cypress run --browser chrome --spec cypress/integration/**.js",
+    "cy:run10": "cypress run --browser chrome --spec cypress/integration/AA/**.js",
+    "cy:run11": "cypress run --browser chrome --spec cypress/integration/BB/**.js"
+    
   },
   "keywords": [],
   "author": "",
