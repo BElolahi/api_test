@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import data from '../fixtures/example.json'
-import homeSelectors from '../pageObject/homeSelectors'
+import data from '../../fixtures/example.json'
+import homeSelectors from '../../pageObject/homeSelectors'
 
 describe('Api test', () => {
     it('verify url has contains title with LOREM IPSUM text', () => {

@@ -5,5 +5,5 @@ COPY ./package.json ./package.json
 COPY package-lock.json  ./package-lock.json 
 COPY ./cypress.json ./cypress.json
 COPY ./cypress ./cypress
-RUN npm install uuid@latest
+RUN npm install 
 ENTRYPOINT ["npm", "run"]
