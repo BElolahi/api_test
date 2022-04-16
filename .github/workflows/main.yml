@@ -5,9 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     # Docker image with Cypress pre-installed
     # https://github.com/cypress-io/cypress-docker-images/tree/master/included
-    container: cypress/included:9.4.1
+    container: cypress/included:9.5.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Cypress run
         uses: cypress-io/github-action@v2
+         with:
+           install: false
+           working-directory: packages/e2e
+           start: npm --version
