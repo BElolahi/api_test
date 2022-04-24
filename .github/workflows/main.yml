@@ -7,7 +7,8 @@ jobs:
     # https://github.com/cypress-io/cypress-docker-images/tree/master/included
     container: cypress/included:9.5.1
     steps:
-      - uses: actions/checkout@v2
-      - run: cypress run
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag cyp-dock:latest
 
 
