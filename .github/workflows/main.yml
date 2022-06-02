@@ -1,18 +1,18 @@
-name: included
+name: Cypress test
 
 on: [push]
 
 jobs:
   
   cypress-run:
-    runs-on: ubuntu-latest
-    container: cypress/included:9.5.1
-    
+    runs-on: ubuntu-latest    
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: npm i
-      - run: | 
-          docker build -t cyp-dock .
-      - run: | 
-          docker-compose up       
+
+      - name: Cypress run
+        uses: cypress-io/githup-action@v2
+        with:
+           build: npm run build
+           start: npm start
+               
