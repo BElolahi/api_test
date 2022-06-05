@@ -1,5 +1,20 @@
-{
-    "projectId":"UDFIO"
-    "watchForFileChanges":true,
-    "defaultCommandTimeout":20000
+{ "projectId": "qUEQD9",
+    "parallel": true,
+    "jobs": 4,
+    "defaultCommandTimeout":15000,
+    "integrationFolder": "cypress/integration",
+    "fixturesFolder": "cypress/fixtures",
+    "failOnStatusCode": false,
+    "supportFile": "cypress/support",
+    "chromeWebSecurity": false,
+    "video": false,
+    "screenshot": false,
+    "screenshotOnRunFailure": false,
+    "viewportWidth": 2000,
+    "viewportHeight": 1200,
+    "retries": {
+      "runMode": 2,
+      "openMode": 0
+    }
 }
+  
