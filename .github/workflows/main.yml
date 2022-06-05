@@ -1,16 +1,52 @@
-name: End-to-end tests
+name: Cypress tests
+
 on: [push]
+
 jobs:
   cypress-run:
+    name: Cypress run
     runs-on: ubuntu-20.04
+    strategy:
+      # when one test fails, DO NOT cancel the other
+      # containers, because this will kill Cypress processes
+      fail-fast: false
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run 
-        uses: cypress-io/github-action@
-        
-      - name: List directories
-        run: ls
-        
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with: 
+          spec: |
+            cypress/integration/**.spec.js
+
+  cypress-run2:
+    name: Cypress run2
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with: 
+          spec: |
+            cypress/integration/resetPasswordPage/BB.spec.js   
+
+  cypress-run3:
+    name: Cypress run3
+    runs-on: ubuntu-20.04
+    strategy:
+      # when one test fails, DO NOT cancel the other
+      # containers, because this will kill Cypress processes
+      fail-fast: false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          spec: |
+            cypress/integration/AA/**.spec.js                             
