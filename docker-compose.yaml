@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  e2e-chrome_9:
+    image: 'cyp-dock'
+    command: 'cy:run10'
+    volumes:
+      - .:/var/www:consistent
+  e2e-chrome_10:
+    image: 'cyp-dock'
+    command: 'cy:run11'
+    volumes:
+      - .:/var/www:consistent
+  e2e-chrome_11:
+    image: 'cyp-dock'
+    command: 'cy:run12'
+    volumes:
+      - .:/var/www:consistent
+      
+ 
