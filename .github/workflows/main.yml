@@ -23,4 +23,3 @@ jobs:
           group: 'Actions example'
         env:          
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
