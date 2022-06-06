@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # run 3 copies of the current job in parallel
+        # run 4 copies of the current job in parallel
         containers: [1, 2, 3, 4]
     steps:
       - name: Checkout
@@ -20,7 +20,6 @@ jobs:
         with:
           record: true
           parallel: true
-          parallelism: 6,
           group: 'Actions example'
         env:          
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
