@@ -32,7 +32,7 @@ jobs:
         uses: cypress-io/github-action@v4
         with: 
           spec: |
-            cypress/integration/resetPasswordPage/BB.spec.js   
+            cypress/integration/BB/**spec.js   
 
   cypress-run3:
     name: Cypress run3
