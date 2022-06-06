@@ -1,5 +1,10 @@
 {
-    "projectId":"UDFIO",
-    "watchForFileChanges":true,
-    "defaultCommandTimeout":20000
+  "projectId": "pj57oz",
+  "integrationFolder": "cypress/integration",
+  "fixturesFolder": "cypress/fixtures",
+  "supportFile": "cypress/support",
+  "chromeWebSecurity": false,
+  "video": false,
+  "screenshot": false,
+  "screenshotOnRunFailure": false
 }
