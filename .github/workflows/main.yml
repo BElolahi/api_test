@@ -20,7 +20,7 @@ jobs:
         with:
           record: true
           parallel: true
-          parallelism: 4,
+          parallelism: 3,
           group: 'Actions example'
         env:          
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
