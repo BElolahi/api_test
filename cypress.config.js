@@ -3,7 +3,9 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
  
   setupNodeEvents(on, config) {
-    return config ; // here you can add ur plugin folder. 
+    return config ; 
+    // here you can add ur plugin folder.(register)
+    //return require('./cypress/plugins/index')(on,config); 
   },
   component: {
     viewportWidth: 500,
