@@ -7,12 +7,11 @@
     "cy:run12": "cypress run --browser chrome --spec cypress/integration/**.js",
     "cy:run10": "cypress run --browser chrome --spec cypress/integration/AA/**.js",
     "cy:run11": "cypress run --browser chrome --spec cypress/integration/BB/**.js"
-    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^9.5.2"
+    "cypress": "^10.0.3"
   }
 }
