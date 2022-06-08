@@ -27,3 +27,26 @@ jobs:
           group: 'Actions example'
         env:          
           CYPRESS_RECORD_KEY: "${{ secrets.CYPRESS_RECORD_KEY }}"
+
+
+# Github action work flow to run docker file
+#name: Cypress Tests
+
+#on:
+ # pull_request: [release]
+
+#concurrency:
+    #group: cypress-pipeline-${{ github.head_ref }}
+    #cancel-in-progress: true
+
+#jobs:
+  #cypressTest:
+    #runs-on: ubuntu-latest
+    #steps:
+     # - name: Checkout
+      #  uses: actions/checkout@v2
+      #- run: npm ci
+      #- run: | 
+       #   docker build -t cy-img-dock .
+      #- run: | 
+       #   docker-compose up   
