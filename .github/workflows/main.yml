@@ -1,4 +1,4 @@
-# parallelization throght  
+# parallelization through cypress dashboard  
 name: Cypress Tests
 
 on: [push]
@@ -56,46 +56,49 @@ jobs:
 
 # multi Jobs work parallel 
 # each Job run specific tests 
-name: Cypress Tests
-on: [push]
+#name: Cypress Tests
+#on: [push]
 
-jobs:
-  test1:
-    name: Cypress run(1)
-    runs-on: ubuntu-20.04
-    strategy:
-      fail-fast: false 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+#jobs:
+ # test1:
+  #  name: Cypress run(1)
+   # runs-on: ubuntu-20.04
+   # strategy:
+    #  fail-fast: false 
+   # steps:
+    #  - name: Checkout
+     #   uses: actions/checkout@v2
       
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          spec: cypress/e2e/foldername/**.js  
-  test2:
-    name: Cypress run(2)
-    runs-on: ubuntu-20.04
-    strategy:
-      fail-fast: false 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      #- name: Cypress run
+       # uses: cypress-io/github-action@v4
+        #with:
+         # spec: cypress/e2e/foldername1/**.js  
+  
+  # test2:
+  #  name: Cypress run(2)
+   # runs-on: ubuntu-20.04
+   # strategy:
+    #  fail-fast: false 
+   # steps:
+    #  - name: Checkout
+     #   uses: actions/checkout@v2
       
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          spec: cypress/e2e/foldername/**.jsx  
-  test3:
-    name: Cypress run(2)
-    runs-on: ubuntu-20.04
-    strategy:
-      fail-fast: false 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      #- name: Cypress run
+       # uses: cypress-io/github-action@v4
+        #with:
+         # spec: cypress/e2e/foldername2/**.js
+
+    # test3:
+  #  name: Cypress run(3)
+   # runs-on: ubuntu-20.04
+   # strategy:
+    #  fail-fast: false 
+   # steps:
+    #  - name: Checkout
+     #   uses: actions/checkout@v2
       
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          spec: cypress/e2e/foldername/**.jsx
+      #- name: Cypress run
+       # uses: cypress-io/github-action@v4
+        #with:
+         # spec: cypress/e2e/foldername3/**.js     
+  
