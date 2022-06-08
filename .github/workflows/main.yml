@@ -1,3 +1,4 @@
+# parallelization throght  
 name: Cypress Tests
 
 on: [push]
@@ -27,6 +28,7 @@ jobs:
           group: 'Actions example'
         env:          
           CYPRESS_RECORD_KEY: "${{ secrets.CYPRESS_RECORD_KEY }}"
+          CYPRESS_PROJECT_ID: "${{ secrets.PROJECT_ID }}"
 
 
 # Github action work flow to run docker file
@@ -50,3 +52,50 @@ jobs:
        #   docker build -t cy-img-dock .
       #- run: | 
        #   docker-compose up   
+
+
+# multi Jobs work parallel 
+# each Job run specific tests 
+name: Cypress Tests
+on: [push]
+
+jobs:
+  test1:
+    name: Cypress run(1)
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          spec: cypress/e2e/foldername/**.js  
+  test2:
+    name: Cypress run(2)
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          spec: cypress/e2e/foldername/**.jsx  
+  test3:
+    name: Cypress run(2)
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          spec: cypress/e2e/foldername/**.jsx

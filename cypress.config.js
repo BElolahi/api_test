@@ -12,7 +12,6 @@ module.exports = defineConfig({
     viewportHeight: 500
   },
   e2e: {
-    projectId: "pj57oz",
     defaultCommandTimeout: 10000,
     specPattern:"**/*.cy.{js,jsx,ts,tsx}",
     fixturesFolder: "./cypress/fixtures",
