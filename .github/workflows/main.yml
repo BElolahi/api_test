@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: main repo
-        run: cd /
+        run: pwd
       - name: where am i
         run: ls
       - name: Cypress run
