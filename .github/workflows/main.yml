@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
       - name: main repo
         run: |
-            ls /home/runner/work/api_test
+            ls /home/runner/work/api_test/api_test
             pwd
       - name: where am i
         run: ls
